@@ -13,6 +13,8 @@ public class Explosion : MonoBehaviour
     [SerializeField] private float seconds;
     [SerializeField] private Material material;
     [SerializeField] private Color finalColor;
+    
+    public float Radius => radius;
 
     private Color _initialColor;
     private float _elapsedTime;
