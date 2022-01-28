@@ -9,6 +9,6 @@ public class ExplosionEditor : Editor
         DrawDefaultInspector();
 
         Explosion myScript = (Explosion) target;
-        if(GUILayout.Button("Explode")) myScript.Explode();
+        if(GUILayout.Button("Trigger Bomb")) myScript.Trigger();
     }
 }
