@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Explosion : MonoBehaviour
 {
@@ -11,10 +12,10 @@ public class Explosion : MonoBehaviour
     [Header("Timer")] 
     [SerializeField] private float seconds;
     [SerializeField] private Material material;
-    [SerializeField] private Color final;
+    [SerializeField] private Color finalColor;
 
     private Color _initialColor;
-    private float elapsedTime = 0;
+    private float _elapsedTime;
     
     private void Awake()
     {
@@ -34,10 +35,10 @@ public class Explosion : MonoBehaviour
 
     private IEnumerator ChangeColor()
     {
-        while (elapsedTime <= 1)
+        while (_elapsedTime <= 1)
         {
-            elapsedTime += Time.deltaTime / seconds;
-            material.color = Color.Lerp(_initialColor, final, elapsedTime);
+            _elapsedTime += Time.deltaTime / seconds;
+            material.color = Color.Lerp(_initialColor, finalColor, _elapsedTime);
             
             yield return  null;
         }

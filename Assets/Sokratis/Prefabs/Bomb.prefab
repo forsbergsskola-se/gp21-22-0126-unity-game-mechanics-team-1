@@ -115,4 +115,4 @@ MonoBehaviour:
   upwardsModifier: 5
   seconds: 0.5
   material: {fileID: 2100000, guid: 6e3839426abdcb34ca4de28b3d4ce4f0, type: 2}
-  final: {r: 0.6886792, g: 0.069301, b: 0.069301, a: 0}
+  finalColor: {r: 0.6603774, g: 0.1474427, b: 0.1474427, a: 0}
