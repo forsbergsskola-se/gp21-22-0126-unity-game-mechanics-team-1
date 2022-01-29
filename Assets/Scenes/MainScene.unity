@@ -483,26 +483,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3064756706044752458, guid: 85dddd531e8bde940a367eeffaa39238, type: 3}
-      propertyPath: power
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064756706044752458, guid: 85dddd531e8bde940a367eeffaa39238, type: 3}
-      propertyPath: finalColor.b
-      value: 0.24813682
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064756706044752458, guid: 85dddd531e8bde940a367eeffaa39238, type: 3}
-      propertyPath: finalColor.g
-      value: 0.17547758
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064756706044752458, guid: 85dddd531e8bde940a367eeffaa39238, type: 3}
-      propertyPath: finalColor.r
-      value: 0.8584906
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064756706044752458, guid: 85dddd531e8bde940a367eeffaa39238, type: 3}
-      propertyPath: upwardsModifier
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6450358642450859984, guid: 85dddd531e8bde940a367eeffaa39238, type: 3}
       propertyPath: m_Name
       value: LandMine

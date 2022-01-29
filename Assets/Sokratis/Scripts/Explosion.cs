@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class Explosion : MonoBehaviour
 {
@@ -19,11 +18,8 @@ public class Explosion : MonoBehaviour
     private Color _initialColor;
     private float _elapsedTime;
     
-    private void Awake()
-    {
-        _initialColor = material.color;
-    }
-
+    private void Awake() =>  _initialColor = material.color;
+   
     public void Trigger() => StartCoroutine(Charge());
 
     private IEnumerator Charge()
@@ -33,6 +29,8 @@ public class Explosion : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         
         Explode();
+        
+        this.gameObject.SetActive(false);
     }
 
     private IEnumerator ChangeColor()
@@ -50,6 +48,7 @@ public class Explosion : MonoBehaviour
     {
         var explosionPos = transform.position;
         Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
+       
         foreach (Collider hit in colliders)
         {
             var rb = hit.GetComponent<Rigidbody>();
@@ -58,21 +57,13 @@ public class Explosion : MonoBehaviour
             if (walkController != null) walkController.CanWalk = false;
             
             if (rb != null)
-            {
-                rb.AddExplosionForce(power, explosionPos, radius,upwardsModifier, ForceMode.Impulse); 
-            }
+                rb.AddExplosionForce(power, explosionPos, radius, upwardsModifier, ForceMode.Impulse); 
         }
 
         material.color = _initialColor;
+        this.gameObject.SetActive(false);
     }
 
-    private IEnumerator BlockWalk(PlayerWalkController walkController)
-    {
-        walkController.CanWalk = false;
-        yield return new WaitForSeconds(5);
-        walkController.CanWalk = true;
-    }
-    
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
