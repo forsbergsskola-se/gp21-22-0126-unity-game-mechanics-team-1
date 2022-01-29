@@ -52,13 +52,25 @@ public class Explosion : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
         foreach (Collider hit in colliders)
         {
-            Rigidbody rb = hit.GetComponent<Rigidbody>();
+            var rb = hit.GetComponent<Rigidbody>();
+            var walkController = hit.GetComponent<PlayerWalkController>();
+
+            if (walkController != null) walkController.CanWalk = false;
             
-            if (rb != null) 
-                rb.AddExplosionForce(power, explosionPos, radius,upwardsModifier, ForceMode.Impulse);
+            if (rb != null)
+            {
+                rb.AddExplosionForce(power, explosionPos, radius,upwardsModifier, ForceMode.Impulse); 
+            }
         }
 
         material.color = _initialColor;
+    }
+
+    private IEnumerator BlockWalk(PlayerWalkController walkController)
+    {
+        walkController.CanWalk = false;
+        yield return new WaitForSeconds(5);
+        walkController.CanWalk = true;
     }
     
     private void OnDrawGizmos()
