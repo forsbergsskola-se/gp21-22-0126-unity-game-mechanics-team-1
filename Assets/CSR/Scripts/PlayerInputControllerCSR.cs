@@ -5,11 +5,14 @@ using UnityEngine;
 
 public class PlayerInputControllerCSR : MonoBehaviour
 {
-   public float moveInput;
-   public bool jumpInput;
+    public float MoveInput { get; private set; }
+    public bool JumpInput { get; private set; }
+    //private bool jumpInput;
+    //public bool JumpInput => jumpInput;
+    
    private void Update()
    {
-       moveInput = Input.GetAxis("Horizontal");
-       jumpInput = Input.GetKeyDown(KeyCode.Space);
+       MoveInput = Input.GetAxis("Horizontal");
+       JumpInput = Input.GetKeyDown(KeyCode.Space);
    }
 }
