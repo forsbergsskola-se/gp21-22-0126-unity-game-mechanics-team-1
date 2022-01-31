@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
     public Rigidbody myRigidbody;
     public float moveSpeed = 5f;
     public float jumpForce = 500f;
-
+    
+    
     private void Update()
     {
         //Preferably get input in Update()
@@ -25,6 +26,9 @@ public class PlayerController : MonoBehaviour
         //Preferably interact physics in FixedUpdate()
         if (jumpInput)
             myRigidbody.AddForce(Vector3.up * jumpForce);
+        
+        
 
     }
+    
 }
