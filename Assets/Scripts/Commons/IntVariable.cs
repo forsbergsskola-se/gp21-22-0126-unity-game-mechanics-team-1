@@ -4,7 +4,7 @@ using UnityEngine;
 public class IntVariable : ScriptableObject
 {
     [SerializeField] private int intValue;
-    public int Int
+    public int Value
     {
         get => intValue;
         set => intValue = value;
