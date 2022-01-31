@@ -7,10 +7,18 @@ public class GroundCheckerCSR : MonoBehaviour
 {
     public bool IsGrounded { get; private set; }
     [SerializeField] private float groundCheckLenght = 1f;
+    [SerializeField] private float groundCheckRadius = 0.5f;
     [SerializeField] private LayerMask groundLayers;
     private void Update()
     {
         var ray = new Ray(transform.position, Vector3.down);
-        IsGrounded = Physics.Raycast(ray, groundCheckLenght);
+        IsGrounded = Physics.SphereCast(ray, groundCheckRadius, groundCheckRadius);
+        
+        Debug.DrawRay(transform.position, Vector3.down * groundCheckLenght, Color.green);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(transform.position + Vector3.down * groundCheckLenght, groundCheckRadius);
     }
 }
