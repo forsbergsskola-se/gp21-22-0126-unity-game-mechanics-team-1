@@ -10,7 +10,7 @@ public class ShootingMa : MonoBehaviour
     public float bulletForce = 20;
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Shoot();
         }
@@ -18,8 +18,7 @@ public class ShootingMa : MonoBehaviour
 
     void Shoot()
     {
-       GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-      Rigidbody MR= bullet.GetComponent<Rigidbody>();
-      MR.AddForce(firePoint.up*bulletForce,ForceMode.Impulse);
+       Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        
     }
 }
