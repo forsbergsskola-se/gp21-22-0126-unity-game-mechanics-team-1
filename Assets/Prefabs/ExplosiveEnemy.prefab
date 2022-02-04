@@ -148,6 +148,6 @@ MonoBehaviour:
   radius: 5
   power: 50
   upwardsModifier: 5
-  seconds: 0.5
+  seconds: 0.8
   material: {fileID: 2100000, guid: e5dc4bd3085c2b642a4221ebf234be81, type: 2}
   finalColor: {r: 1, g: 0.06718244, b: 0, a: 0}

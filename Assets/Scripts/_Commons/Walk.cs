@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Walk
 {
-    private Rigidbody _rigidbody;
-    private float _speed;
+    private readonly Rigidbody _rigidbody;
+    private readonly float _speed;
 
     public Walk(Rigidbody rigidbody, float speed)
     {
