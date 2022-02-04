@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerInputController : MonoBehaviour
@@ -20,6 +19,5 @@ public class PlayerInputController : MonoBehaviour
         DashInput = Input.GetKey(KeyCode.W);
         DashCharge = Input.GetKey(KeyCode.E);
         ShootInput = Input.GetMouseButtonDown(0);
-
     }
 }
