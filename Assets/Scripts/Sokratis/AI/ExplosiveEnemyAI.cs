@@ -23,9 +23,9 @@ public class ExplosiveEnemyAI : MonoBehaviour
         if(direction.magnitude <= explosion.Radius) explosion.Trigger();
         
         Physics.SphereCast(transform.position, 1, direction, out RaycastHit hit, range);
-
         if (hit.transform == null || !hit.transform.gameObject.CompareTag("Player")) return;
         direction.x = Mathf.Clamp(hit.transform.position.x - transform.position.x, -1,1);
+        
         _walk.Move(direction.x);
     }
     
