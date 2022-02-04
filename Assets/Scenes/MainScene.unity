@@ -568,6 +568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExplosiveEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7343120273183962562, guid: 805b41841a2d38f4d84604fb4c0a0ee4, type: 3}
+      propertyPath: upwardsModifier
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 805b41841a2d38f4d84604fb4c0a0ee4, type: 3}
 --- !u!1001 &8808534230845386187
@@ -624,10 +628,6 @@ PrefabInstance:
     - target: {fileID: 8808534232274027821, guid: f68fd7f710d04fe4abd08c18124a3272, type: 3}
       propertyPath: m_Name
       value: Player_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 8808534232274027821, guid: f68fd7f710d04fe4abd08c18124a3272, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f68fd7f710d04fe4abd08c18124a3272, type: 3}
