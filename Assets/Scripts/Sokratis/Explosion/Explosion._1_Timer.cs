@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Explosion : MonoBehaviour
+public class Explosion_1_Timer : MonoBehaviour
 {
     [Header("Stats")]
     [SerializeField] private float radius = 5f;
@@ -29,8 +29,6 @@ public class Explosion : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         
         Explode();
-        
-        this.gameObject.SetActive(false);
     }
 
     private IEnumerator ChangeColor()
@@ -61,7 +59,7 @@ public class Explosion : MonoBehaviour
         }
 
         material.color = _initialColor;
-        this.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     private void OnDrawGizmos()

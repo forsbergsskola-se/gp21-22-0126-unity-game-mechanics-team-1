@@ -8,10 +8,15 @@ public class PlayerWalkController : MonoBehaviour
     [SerializeField] private GroundChecker groundChecker;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float chargingMoveSpeedFactor = 0.5f;
-    
+
+    private Walk _walk;
     public bool CanWalk { get; set; }
 
-    private void Awake() => CanWalk = true;
+    private void Awake()
+    {
+        _walk = new Walk(myRigidbody, moveSpeed);
+        CanWalk = true;
+    } 
     
     private void Update()
     {
@@ -20,7 +25,7 @@ public class PlayerWalkController : MonoBehaviour
         if (playerInputController.JumpInput && groundChecker.IsGrounded)
             currentMoveSpeed *= chargingMoveSpeedFactor;
 
-        if(CanWalk) myRigidbody.velocity = new Vector3(playerInputController.MoveInput * currentMoveSpeed, myRigidbody.velocity.y, 0);
+        if(CanWalk) _walk.Move(playerInputController.MoveInput);
     }
 
     private void OnCollisionEnter(Collision other) => CanWalk = true;
