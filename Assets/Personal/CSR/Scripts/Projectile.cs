@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile2 : MonoBehaviour
+public class Projectile : MonoBehaviour
 {
     public float speed;
-    public int damage;
-
-    private Vector3 shootDirection;
+    Vector3 shootDirection;
     void FixedUpdate ()
     {
         this.transform.Translate(shootDirection * speed, Space.World);
@@ -18,5 +16,6 @@ public class Projectile2 : MonoBehaviour
         this.shootDirection = shootRay.direction;
         this.transform.position = shootRay.direction;
     }
+    
     
 }

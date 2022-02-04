@@ -12,7 +12,7 @@ public class GroundCheckerCSR : MonoBehaviour
     private void Update()
     {
         var ray = new Ray(transform.position, Vector3.down);
-        IsGrounded = Physics.SphereCast(ray, groundCheckRadius, groundCheckRadius);
+        IsGrounded = Physics.SphereCast(ray, groundCheckRadius, groundCheckLenght, groundLayers);
         
         Debug.DrawRay(transform.position, Vector3.down * groundCheckLenght, Color.green);
     }
