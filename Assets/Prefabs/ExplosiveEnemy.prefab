@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4266271919830749584}
   - component: {fileID: 4266271919830749585}
   - component: {fileID: 809846002}
+  - component: {fileID: 7343120273183962562}
   m_Layer: 0
   m_Name: ExplosiveEnemy
   m_TagString: Untagged
@@ -128,5 +129,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 4266271919830749585}
+  target: {fileID: 0}
+  explosion: {fileID: 7343120273183962562}
   range: 10
   walkSpeed: 2
+--- !u!114 &7343120273183962562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4266271919830749587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49163ee6061f5648a42126d9b3b6230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 5
+  power: 50
+  upwardsModifier: 5
+  seconds: 0.5
+  material: {fileID: 2100000, guid: e5dc4bd3085c2b642a4221ebf234be81, type: 2}
+  finalColor: {r: 1, g: 0.06718244, b: 0, a: 0}
