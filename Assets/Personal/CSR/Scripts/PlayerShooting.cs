@@ -19,9 +19,10 @@ public class PlayerShooting : MonoBehaviour
     void raycastOnMouseClick () {
         RaycastHit hit;
         Ray rayToFloor = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Debug.DrawRay(rayToFloor.origin, rayToFloor.direction * 100.1f, Color.red, 2);
+        //Debug.DrawRay(rayToFloor.origin, rayToFloor.direction * 100.1f, Color.red, 2);
+        Debug.DrawRay(rayToFloor.origin, rayToFloor.direction * 200.1f, Color.red, 2);
 
-        if(Physics.Raycast(rayToFloor, out hit, 100.0f, mask, QueryTriggerInteraction.Collide)) {
+        if(Physics.Raycast(rayToFloor, out hit, 200.0f, mask, QueryTriggerInteraction.Collide)) {
             shoot(hit);
         }
     }

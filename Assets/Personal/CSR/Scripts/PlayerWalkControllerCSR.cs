@@ -6,13 +6,18 @@ using UnityEngine;
 public class PlayerWalkControllerCSR : MonoBehaviour
 {
     [SerializeField] private Rigidbody myRigidbody;
-    [SerializeField] private PlayerInputControllerCSR playerInputControllerCsr;
+    [SerializeField] private PlayerInputControllerCSR playerInputControllerCSR;
+    [SerializeField] private GroundCheckerCSR groundCheckerCSR;
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float chargingMoveSpeedFactor = 0.5f;
 
     private void Update()
     {
-        //Set move velocity
-        //Preferably interact with physics in FixedUpdate()
-        myRigidbody.velocity = new Vector3(playerInputControllerCsr.MoveInput * moveSpeed, myRigidbody.velocity.y, 0);
+        //Slower move speed while charging a jump.
+        var currentMoveSpeed = moveSpeed;
+        if (playerInputControllerCSR.JumpInput && groundCheckerCSR.IsGrounded)
+            currentMoveSpeed *= chargingMoveSpeedFactor;
+        
+        myRigidbody.velocity = new Vector3(playerInputControllerCSR.MoveInput * currentMoveSpeed, myRigidbody.velocity.y, 0);
     }
 }
