@@ -9,6 +9,7 @@ public class PlayerInputController : MonoBehaviour
     public bool DashInput { get; private set; }
     public bool DashCharge { get; private set; }
     public bool ShootInput { get; private set; }
+    
 
     private void Update()
     {

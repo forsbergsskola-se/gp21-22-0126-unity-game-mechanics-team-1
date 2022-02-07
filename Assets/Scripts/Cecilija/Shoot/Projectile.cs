@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed;
-    Vector3 shootDirection;
+    [SerializeField] private float speed;
+    [SerializeField] Vector3 shootDirection;
+    
     void FixedUpdate ()
     {
         this.transform.Translate(shootDirection * speed, Space.World);
