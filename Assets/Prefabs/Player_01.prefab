@@ -49,6 +49,52 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 1
+--- !u!1 &1874914504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1874914505}
+  - component: {fileID: 1874914506}
+  m_Layer: 3
+  m_Name: Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1874914505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874914504}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.578, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8808534232274027809}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1874914506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874914504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9df6556d88703d940ad8a42611269ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputController: {fileID: 5709071434553257191}
+  bullet: {fileID: 3378203037136041080, guid: e30951efd22b52a4995c05fc4d09f49c, type: 3}
 --- !u!1 &5756868813407219503
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +154,6 @@ GameObject:
   - component: {fileID: 8808534232274027808}
   - component: {fileID: 1877453036}
   - component: {fileID: 1877453037}
-  - component: {fileID: 4342754006132957162}
   m_Layer: 3
   m_Name: Player_01
   m_TagString: Player
@@ -130,6 +175,7 @@ Transform:
   m_Children:
   - {fileID: 4481259007695693545}
   - {fileID: 274159096}
+  - {fileID: 1874914505}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -248,17 +294,3 @@ MonoBehaviour:
   playerInputController: {fileID: 5709071434553257191}
   groundChecker: {fileID: 274159095}
   jumpForce: 500
---- !u!114 &4342754006132957162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8808534232274027821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df6556d88703d940ad8a42611269ef7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _inputController: {fileID: 5709071434553257191}
-  bullet: {fileID: 3378203037136041080, guid: e30951efd22b52a4995c05fc4d09f49c, type: 3}

@@ -8,6 +8,8 @@ public class Shoot : MonoBehaviour
 
    private void Update()
    {
-      if (_inputController.ShootInput) Instantiate(bullet, this.transform.position, Quaternion.identity);
+      if (_inputController != null && _inputController.ShootInput) PullTrigger();
    }
+   
+   public void PullTrigger() => Instantiate(bullet, this.transform.position, Quaternion.identity);
 }

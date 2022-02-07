@@ -378,52 +378,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1874914504
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1874914505}
-  - component: {fileID: 1874914506}
-  m_Layer: 3
-  m_Name: Gun
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1874914505
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1874914504}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.578, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2086908215}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1874914506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1874914504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df6556d88703d940ad8a42611269ef7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _inputController: {fileID: 8808534230845386188}
-  bullet: {fileID: 3378203037136041080, guid: e30951efd22b52a4995c05fc4d09f49c, type: 3}
 --- !u!1 &1898592659
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266271919830749587, guid: 805b41841a2d38f4d84604fb4c0a0ee4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7343120273183962562, guid: 805b41841a2d38f4d84604fb4c0a0ee4, type: 3}
       propertyPath: upwardsModifier
@@ -778,17 +732,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_01
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4342754006132957162, guid: f68fd7f710d04fe4abd08c18124a3272, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f68fd7f710d04fe4abd08c18124a3272, type: 3}
---- !u!114 &8808534230845386188 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5709071434553257191, guid: f68fd7f710d04fe4abd08c18124a3272, type: 3}
-  m_PrefabInstance: {fileID: 8808534230845386187}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2e73aade95ee354887ec758a24515ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
