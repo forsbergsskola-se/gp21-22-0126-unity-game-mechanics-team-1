@@ -606,6 +606,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExplosiveEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4266271919830749587, guid: 805b41841a2d38f4d84604fb4c0a0ee4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7343120273183962562, guid: 805b41841a2d38f4d84604fb4c0a0ee4, type: 3}
       propertyPath: upwardsModifier
       value: 10
@@ -666,6 +670,10 @@ PrefabInstance:
     - target: {fileID: 6555878983703189362, guid: 1e7eb6d6e6986f94e8e450de79c0e410, type: 3}
       propertyPath: m_Name
       value: AntiGravityEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555878983703189362, guid: 1e7eb6d6e6986f94e8e450de79c0e410, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e7eb6d6e6986f94e8e450de79c0e410, type: 3}

@@ -230,6 +230,8 @@ MonoBehaviour:
   groundChecker: {fileID: 274159095}
   moveSpeed: 5
   chargingMoveSpeedFactor: 0.5
+  dashSpeed: 50
+  dashTime: 0.5
 --- !u!114 &1877453037
 MonoBehaviour:
   m_ObjectHideFlags: 0
