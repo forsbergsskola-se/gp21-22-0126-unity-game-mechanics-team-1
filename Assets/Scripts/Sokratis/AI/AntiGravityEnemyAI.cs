@@ -16,7 +16,7 @@ public class AntiGravityEnemyAI : MonoBehaviour
     private Walk _walk;
     private AntiGravity _antiGravity;
 
-    private bool canMove = true;
+    private bool _canMove = true;
 
     private void Awake()
     {
@@ -26,7 +26,7 @@ public class AntiGravityEnemyAI : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (canMove) Move();
+        if (_canMove) Move();
         else rigidbody.velocity = new Vector3(0, 0, 0);
     }
 
@@ -42,7 +42,7 @@ public class AntiGravityEnemyAI : MonoBehaviour
         
         if (otherRb == null) return;
 
-        canMove = false;
+        _canMove = false;
         _antiGravity.InvertGravity(otherRb);
     }
 
@@ -52,7 +52,7 @@ public class AntiGravityEnemyAI : MonoBehaviour
         
         if (otherRb == null) return;
         
-        canMove = true;
+        _canMove = true;
         _antiGravity.ReturnGravity(otherRb);
     }
 }
