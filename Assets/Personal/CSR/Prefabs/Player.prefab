@@ -16,12 +16,9 @@ GameObject:
   - component: {fileID: 5097062626412147789}
   - component: {fileID: 387422666}
   - component: {fileID: 5097062626412147788}
-  - component: {fileID: 387422674}
   - component: {fileID: 4252355089197325169}
-  - component: {fileID: 4164193075022431348}
   - component: {fileID: 6109885535209902270}
   - component: {fileID: 1426365470901536867}
-  - component: {fileID: 4985107538823914217}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -175,22 +172,6 @@ MonoBehaviour:
   playerInputControllerCSR: {fileID: 5097062628231430585}
   groundCheckerCSR: {fileID: 387422666}
   jumpForce: 500
---- !u!114 &387422674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5097062626412147781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70064cd09bf9474ba624214803f8227, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 7320930103875967362, guid: e30951efd22b52a4995c05fc4d09f49c, type: 3}
-  mask:
-    serializedVersion: 2
-    m_Bits: 1
 --- !u!114 &4252355089197325169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,22 +189,6 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 2147483647
---- !u!114 &4164193075022431348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5097062626412147781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70064cd09bf9474ba624214803f8227, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 7320930103875967362, guid: e30951efd22b52a4995c05fc4d09f49c, type: 3}
-  mask:
-    serializedVersion: 2
-    m_Bits: 1
 --- !u!114 &6109885535209902270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,22 +224,6 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 2147483647
---- !u!114 &4985107538823914217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5097062626412147781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70064cd09bf9474ba624214803f8227, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 7320930103875967362, guid: e30951efd22b52a4995c05fc4d09f49c, type: 3}
-  mask:
-    serializedVersion: 2
-    m_Bits: 1
 --- !u!1 &5097062628231430590
 GameObject:
   m_ObjectHideFlags: 0

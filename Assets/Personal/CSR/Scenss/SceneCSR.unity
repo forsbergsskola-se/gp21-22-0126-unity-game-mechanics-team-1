@@ -840,6 +840,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871889342}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &907737647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5097062626412147781, guid: 0e887e0b63c8b89459e57a925af7eb4b, type: 3}
+  m_PrefabInstance: {fileID: 5097062626628775301}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &907737662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907737647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9df6556d88703d940ad8a42611269ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputController: {fileID: 0}
+  bullet: {fileID: 0}
 --- !u!1 &1290336322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,7 +1410,7 @@ PrefabInstance:
       propertyPath: groundLayers.m_Bits
       value: 2147483647
       objectReference: {fileID: 0}
-    - target: {fileID: 387422674, guid: 0e887e0b63c8b89459e57a925af7eb4b, type: 3}
+    - target: {fileID: 0}
       propertyPath: mask.m_Bits
       value: 2147483647
       objectReference: {fileID: 0}
