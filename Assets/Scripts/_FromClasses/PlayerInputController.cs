@@ -17,7 +17,7 @@ public class PlayerInputController : MonoBehaviour
         JumpInputDown = Input.GetKeyDown(KeyCode.Space);
         JumpInputUp = Input.GetKeyUp(KeyCode.Space);
         JumpInput = Input.GetKey(KeyCode.Space);
-        DashInput = Input.GetKey(KeyCode.W);
+        DashInput = Input.GetKeyDown(KeyCode.W);
         DashCharge = Input.GetKey(KeyCode.E);
         ShootInput = Input.GetMouseButtonDown(0);
     }

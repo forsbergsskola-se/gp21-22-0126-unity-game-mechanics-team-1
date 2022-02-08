@@ -14,7 +14,7 @@ public class PlayerWalkController : MonoBehaviour
     [Header("Dash")] 
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashTime;
-
+    
     private Walk _walk;
     private Dash_Imidiate _dash;
     
@@ -43,6 +43,9 @@ public class PlayerWalkController : MonoBehaviour
         
         CanWalk = _dash.CanWalk();
         CanDash = _dash.CanDash();
+        
+        Debug.Log("CanDash: " + CanDash);
+        Debug.Log("CanWalk: " + CanWalk);
     }
 
     private void OnCollisionEnter(Collision other) => CanWalk = true;
