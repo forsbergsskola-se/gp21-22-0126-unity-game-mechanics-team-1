@@ -26,7 +26,8 @@ public class AntiGravityEnemyAI : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(canMove) Move();
+        if (canMove) Move();
+        else rigidbody.velocity = new Vector3(0, 0, 0);
     }
 
     private void Move()
