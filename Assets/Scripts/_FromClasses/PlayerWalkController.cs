@@ -32,15 +32,8 @@ public class PlayerWalkController : MonoBehaviour
     
     private void Update()
     {
-        //Slower move speed while charging a jump.
-        var currentMoveSpeed = moveSpeed;
-        if (playerInputController.JumpInput && groundChecker.IsGrounded)
-            currentMoveSpeed *= chargingMoveSpeedFactor;
-       
-
         if (playerInputController.DashInput && CanDash && playerInputController.MoveInput != 0)
         {
-            Debug.Log("W kaye and MoveInput");
             CanDash = false;
             CanWalk = false;
             var inputNormalized = Mathf.Sign(playerInputController.MoveInput);
