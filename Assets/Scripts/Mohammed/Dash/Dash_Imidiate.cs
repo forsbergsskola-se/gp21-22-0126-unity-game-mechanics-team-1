@@ -34,8 +34,7 @@ public class Dash_Imidiate
 
         canDash = true;
         canWalk = true;
-        timeCounter = 0f;
-
+        
         yield return null;
     }
 

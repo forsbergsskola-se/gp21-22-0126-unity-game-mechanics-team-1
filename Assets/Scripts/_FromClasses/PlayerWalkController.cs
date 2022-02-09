@@ -9,12 +9,11 @@ public class PlayerWalkController : MonoBehaviour
     
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float chargingMoveSpeedFactor = 0.5f;
-
+   
     [Header("Dash")] 
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashTime;
-
+    
     private Walk _walk;
     private Dash_Imidiate _dash;
     

@@ -2,20 +2,15 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    [SerializeField] private Rigidbody rigidbody;
     [SerializeField] private float speed;
     [SerializeField] Vector3 shootDirection;
-    
-    void FixedUpdate ()
+
+    private void Start()
     {
-        this.transform.Translate(shootDirection * speed, Space.World);
+        rigidbody.velocity = shootDirection * speed;
     }
 
-    public void FireProjectile(Ray shootRay)
-    {
-        this.shootDirection = shootRay.direction;
-        this.transform.position = shootRay.direction;
-    }
-    
-    
+    private void OnCollisionEnter(Collision other) => Destroy(gameObject);
     
 }

@@ -53,9 +53,12 @@ public class Explosion_1_Timer : MonoBehaviour
             var walkController = hit.GetComponent<PlayerWalkController>();
 
             if (walkController != null) walkController.CanWalk = false;
-            
+
             if (rb != null)
-                rb.AddExplosionForce(power, explosionPos, radius, upwardsModifier, ForceMode.Impulse); 
+            {
+                rb.velocity = Vector3.zero;
+                rb.AddExplosionForce(power, explosionPos, radius, upwardsModifier, ForceMode.Impulse);  
+            }
         }
 
         material.color = _initialColor;
