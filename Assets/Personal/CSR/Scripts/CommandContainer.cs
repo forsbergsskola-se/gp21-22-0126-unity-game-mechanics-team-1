@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class CommandContainer : MonoBehaviour
 {
-    public float wolkCommand;
+    //These fields are visible in the inspector, which can be useful for testing.
+    //But in same cases we might want to use [HideInInspector] or getters/setters to hide these fields.
+    
+    public float walkCommand;
     public bool JumpCommandDowen;
     public bool JumpCommandUp;
     public bool JumpICommand;
