@@ -16,7 +16,7 @@ public class fly2 : MonoBehaviour
    private void Awake()
    {
       rg = GetComponent<Rigidbody>();
-      sx = GetComponent < SphereCollider();
+    
    }
 
    private void Update()
@@ -26,11 +26,5 @@ public class fly2 : MonoBehaviour
       isJump = Input.GetKeyDown("F");
    }
 
-   private void FixedUpdate()
-   {
-      Walk();
-      Fly();
-      Jump;
-
-   }
+  
 }

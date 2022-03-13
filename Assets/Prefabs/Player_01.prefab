@@ -75,7 +75,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.13052616, y: -0, z: -0, w: 0.9914449}
-  m_LocalPosition: {x: 0, y: 10, z: -15}
+  m_LocalPosition: {x: 4.2, y: 4.4, z: -9.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 8808534232274027808}
   - component: {fileID: 1877453036}
   - component: {fileID: 1877453037}
+  - component: {fileID: 5585643849208475300}
   m_Layer: 3
   m_Name: Player_01
   m_TagString: Player
@@ -292,7 +293,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e013a2e4afa5f3e41b50d871a6a9f218, type: 2}
+  - {fileID: 2100000, guid: 4a8234808a0bb63408ab2d6e554f4a1c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -360,7 +361,6 @@ MonoBehaviour:
   playerInputController: {fileID: 5709071434553257191}
   groundChecker: {fileID: 274159095}
   moveSpeed: 5
-  chargingMoveSpeedFactor: 0.5
   dashSpeed: 50
   dashTime: 0.15
 --- !u!114 &1877453037
@@ -379,3 +379,19 @@ MonoBehaviour:
   playerInputController: {fileID: 5709071434553257191}
   groundChecker: {fileID: 274159095}
   jumpForce: 500
+--- !u!114 &5585643849208475300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8808534232274027821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4eefa3f926f81d4fbc240c413469849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 0}
+  mask:
+    serializedVersion: 2
+    m_Bits: 2147483647
